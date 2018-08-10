@@ -31,7 +31,7 @@ public class ApplicationTests {
 	@Test
 	public void adminLoads() {
 		@SuppressWarnings("rawtypes")
-		ResponseEntity<Map> entity = testRestTemplate.getForEntity("/env", Map.class);
+		ResponseEntity<Map> entity = testRestTemplate.getForEntity("/actuator/health", Map.class);
 		assertEquals(HttpStatus.OK, entity.getStatusCode());
 	}
 
